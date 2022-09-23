@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React - CI/CD Version 1.00.4
+          Learn React - CI/CD Version 1.00.5
         </a>
       </header>
     </div>
