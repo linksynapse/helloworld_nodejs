@@ -5,10 +5,14 @@ import utf8 from 'utf8';
 import base64 from 'base-64';
 
 function EncodeBase64(str){
+  var endcodeData = base64.encode(str);
+  console.log(endcodeData);
   return base64.encode(utf8.encode(str));
 }
 
 function DecodeBase64(data){
+  var decodeData = base64.decode(data);
+  console.log(decodeData);
   return base64.decode(utf8.decode(data));
 }
 
@@ -28,8 +32,6 @@ function App() {
         >
           Learn React - CI/CD Version 1.00.5
         </a>
-        <a>{EncodeBase64('SGVsbG8g8J+Yig==')}</a>
-        <a>{DecodeBase64('Hello 😊')}</a>
       </header>
     </div>
   );
