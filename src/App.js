@@ -2,12 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function EncodeBase64(str){
-  let buff = new Buffer.from(str, 'utf-8').toString('base64');
+  let buff = new Buffer(str, 'utf-8').toString('base64');
   return buff;
 }
 
 function DecodeBase64(data){
-  let buff = new Buffer.from(data, 'base64').toString();
+  let buff = new Buffer(data, 'base64').toString('utf-8');
   return buff;
 }
 
