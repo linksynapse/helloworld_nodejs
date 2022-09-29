@@ -1,14 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-function base64DecodeUnicode(str) {
-  // Convert Base64 encoded bytes to percent-encoding, and then get the original string.
-  var percentEncodedStr = atob(str).split('').map(function(c) {
-      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join('');
-
-
-  return decodeURIComponent(percentEncodedStr);
+function EncodeBase64(str){
+  let buff = new Buffer(str).toString('base64');
+  return buff;
 }
 
 function App() {
