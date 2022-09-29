@@ -7,13 +7,13 @@ import base64 from 'base-64';
 function EncodeBase64(str){
   var endcodeData = base64.encode(str);
   console.log(endcodeData);
-  return base64.encode(utf8.encode(str));
+  return endcodeData;
 }
 
 function DecodeBase64(data){
   var decodeData = base64.decode(data);
   console.log(decodeData);
-  return base64.decode(utf8.decode(data));
+  return decodeData;
 }
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
         >
           Learn React - CI/CD Version 1.00.5
         </a>
+        <a>{EncodeBase64('helloworld')}</a>
       </header>
     </div>
   );
