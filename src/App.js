@@ -1,14 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+import utf8 from 'utf8';
+import base64 from 'base-64';
+
 function EncodeBase64(str){
-  let buff = new Buffer(str, 'utf-8').toString('base64');
-  return buff;
+  return base64.encode(utf8.encode(str));
 }
 
 function DecodeBase64(data){
-  let buff = new Buffer(data, 'base64').toString('utf-8');
-  return buff;
+  return base64.decode(utf8.decode(data));
 }
 
 function App() {
