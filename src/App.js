@@ -33,6 +33,7 @@ function App() {
           Learn React - CI/CD Version 1.00.5
         </a>
         <a>{EncodeBase64('helloworld')}</a>
+        <a>{DecodeBase64(EncodeBase64('helloworld'))}</a>
       </header>
     </div>
   );
