@@ -2,7 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function EncodeBase64(str){
-  let buff = new Buffer(str).toString('base64');
+  let buff = new Buffer.from(str, 'utf-8').toString('base64');
+  return buff;
+}
+
+function DecodeBase64(data){
+  let buff = new Buffer.from(data, 'base64').toString();
   return buff;
 }
 
@@ -22,7 +27,8 @@ function App() {
         >
           Learn React - CI/CD Version 1.00.5
         </a>
-        <a>{base64DecodeUnicode('SGVsbG8g8J+Yig==')}</a>
+        <a>{EncodeBase64('SGVsbG8g8J+Yig==')}</a>
+        <a>{DecodeBase64('Hello 😊')}</a>
       </header>
     </div>
   );
