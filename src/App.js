@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-import utf8 from 'utf8';
 import base64 from 'base-64';
+import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function EncodeBase64(str){
   var endcodeData = base64.encode(str);
@@ -32,8 +33,15 @@ function App() {
         >
           Learn React - CI/CD Version 1.00.5
         </a>
-        <a>{EncodeBase64('helloworld')}</a>
-        <a>{DecodeBase64(EncodeBase64('helloworld'))}</a>
+        <Form>
+          <Form.Group className='mb-3' controlId='encodeTextarea'>
+            <Form.Control as="textarea" rows={4} />
+          </Form.Group>
+
+          <Form.Group className='mb-3' controlId='decodeTextarea'>
+            <Form.Control as="textarea" rows={4} />
+          </Form.Group>
+        </Form>
       </header>
     </div>
   );
