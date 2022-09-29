@@ -34,11 +34,11 @@ function App() {
           Learn React - CI/CD Version 1.00.5
         </a>
         <Form>
-          <Form.Group className='mb-3' controlId='encodeTextarea'>
+          <Form.Group className='mb-3 w-100' controlId='encodeTextarea'>
             <Form.Control as="textarea" rows={4} />
           </Form.Group>
 
-          <Form.Group className='mb-3' controlId='decodeTextarea'>
+          <Form.Group className='mb-3 w-100' controlId='decodeTextarea'>
             <Form.Control as="textarea" rows={4} />
           </Form.Group>
         </Form>
